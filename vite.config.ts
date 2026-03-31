@@ -3,10 +3,9 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import path from 'path'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/animated-login/',     // ← 这行对 GitHub Pages 非常重要
+  base: '/animated-login/',           // ← 这行必须有，且仓库名小写
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
