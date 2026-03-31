@@ -1,8 +1,15 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  base: '/animated-login/',   // 必须是仓库名小写 + 斜杠结尾
+  plugins: [react(), tailwindcss()],
+  base: '/animated-login/',     // ← 这行对 GitHub Pages 非常重要
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
 })
