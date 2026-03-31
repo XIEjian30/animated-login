@@ -1,7 +1,7 @@
-import DemoOne from "./demo";
+import AnimatedCharactersLoginPage from './components/ui/animated-characters-login-page/animated-characters-login-page';
 
 function App() {
-  return <DemoOne />;
+  return <AnimatedCharactersLoginPage />;
 }
 
 export default App;
